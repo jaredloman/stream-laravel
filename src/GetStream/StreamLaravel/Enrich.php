@@ -63,7 +63,7 @@ class Enrich {
     {
         $wrappedActivities = array();
         foreach ($activities as $i => $activity) {
-            $wrappedActivities[] = new EnrichedActivity($activity);
+            $wrappedActivities[] = $activity; // Fixes Bug of returning empty objects by bypassing Class instantiation
         }
         return $wrappedActivities;
     }
